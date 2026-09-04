@@ -1,7 +1,9 @@
 import type { AnswerOption, Question } from "./types";
 
 const opt = (entries: Array<[string, string, number?]>): AnswerOption[] =>
-  entries.map(([key, label, score]) => ({ key, label, score }));
+  entries.map(([key, label, score]) =>
+    score === undefined ? { key, label } : { key, label, score },
+  );
 
 const COMFORT = (labels: string[]) =>
   opt(labels.map((label, i) => [String.fromCharCode(65 + i), label, i * (100 / (labels.length - 1))]));
