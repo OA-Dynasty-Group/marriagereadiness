@@ -245,7 +245,8 @@ export function ReportView({
       </div>
 
       {/* Section 7 — 30 day plan */}
-      <div className="mt-12 border-t border-stone-200/70 pt-8">
+      <div id="preparation-plan" className="mt-12 border-t border-stone-200/70 pt-8">
+
         <SectionLabel>Section 7 — Your 30-day preparation plan</SectionLabel>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {report.plan.map((w) => (
