@@ -77,16 +77,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Singles Marriage Readiness Assessment Profile" },
+      {
+        name: "description",
+        content:
+          "A marriage preparation instrument across ten areas: see the mindset, expectations, and relational capacities you are bringing toward marriage.",
+      },
+      { property: "og:title", content: "Singles Marriage Readiness Assessment Profile" },
+      {
+        property: "og:description",
+        content:
+          "A marriage preparation instrument across ten areas — a profile, not a verdict.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Spline+Sans:wght@300..600&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
