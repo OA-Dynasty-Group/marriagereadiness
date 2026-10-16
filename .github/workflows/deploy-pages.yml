@@ -26,13 +26,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Vite app
+      - name: Build
         run: npm run build
+
+      - name: Prepare Cloudflare Pages output
+        run: mkdir -p dist && cp -R .output/public/. dist/
+
+      - name: Verify build output
+        run: ls -la dist
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           command: pages deploy dist --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT }} --branch=${{ github.ref_name }}
