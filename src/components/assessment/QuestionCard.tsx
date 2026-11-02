@@ -192,7 +192,7 @@ export function QuestionCard({
           type="button"
           onClick={onNext}
           disabled={!answered}
-          className="inline-flex items-center rounded-xl bg-stone-800 px-5 py-2.5 font-medium text-stone-100 transition-transform hover:-translate-y-0.5 disabled:opacity-40"
+          className="inline-flex items-center rounded-full bg-oxblood px-6 py-2.5 font-bold text-primary-foreground transition-transform hover:-translate-y-0.5 disabled:opacity-40"
         >
           {isLast ? "See my profile" : question.type === "open" ? "Continue" : "Continue"}
         </button>
