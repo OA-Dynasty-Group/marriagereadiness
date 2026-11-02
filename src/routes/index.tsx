@@ -395,7 +395,7 @@ function Index() {
 function Logo() {
   return (
     <span className="text-xl font-black tracking-tight text-stone-900">
-      Ready<span className="text-oxblood">wed</span>
+      Marriage<span className="text-oxblood">Ready</span>
     </span>
   );
 }
