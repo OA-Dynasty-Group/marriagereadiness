@@ -52,7 +52,7 @@ export function EmailGate({ onSubmit }: { onSubmit: (email: string, name: string
         <button
           type="submit"
           disabled={!valid || !consent}
-          className="w-full rounded-xl bg-oxblood px-6 py-3.5 text-sm font-bold text-stone-900 transition hover:bg-oxblood-600 disabled:opacity-50"
+          className="w-full rounded-xl bg-oxblood px-6 py-3.5 text-sm font-bold text-primary-foreground transition hover:bg-oxblood-600 disabled:opacity-50"
         >
           Get my results
         </button>

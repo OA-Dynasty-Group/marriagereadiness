@@ -295,7 +295,7 @@ export function ReportView({
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a
             href="#preparation-plan"
-            className="inline-flex items-center rounded-xl bg-oxblood px-6 py-3 text-sm font-medium text-stone-900 ring-1 ring-oxblood-700/40 transition-transform hover:-translate-y-0.5"
+            className="inline-flex items-center rounded-xl bg-oxblood px-6 py-3 text-sm font-medium text-primary-foreground ring-1 ring-oxblood-700/40 transition-transform hover:-translate-y-0.5"
           >
             Explore my marriage preparation plan
           </a>
