@@ -19,8 +19,8 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  --font-serif: "Open Sans", system-ui, sans-serif;
-  --font-sans: "Open Sans", system-ui, sans-serif;
+  --font-serif: "Lato", system-ui, sans-serif;
+  --font-sans: "Lato", system-ui, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
