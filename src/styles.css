@@ -77,9 +77,9 @@
   --stone-800: oklch(0.22 0.02 75);
   --stone-900: oklch(0.17 0.02 75);
   --stone-950: oklch(0.13 0.02 75);
-  --oxblood: #F0B53C;
-  --oxblood-600: #CE9829;
-  --oxblood-700: #AC7C19;
+  --oxblood: #8A610D;
+  --oxblood-600: #684705;
+  --oxblood-700: #462F00;
   --clay: #AC7C19;
   --sage: oklch(0.6 0.13 165);
   --violet-soft: #FFEAC1;
@@ -92,7 +92,7 @@
   --popover: oklch(0.99 0.003 85);
   --popover-foreground: var(--stone-800);
   --primary: var(--oxblood);
-  --primary-foreground: #462F00;
+  --primary-foreground: #FFF8EC;
   --secondary: var(--stone-200);
   --secondary-foreground: var(--stone-800);
   --muted: var(--stone-200);
@@ -106,7 +106,7 @@
   --ring: var(--oxblood);
 
   --surface-page: #FFF8EC;
-  --gradient-progress: linear-gradient(90deg, #FFCE6B, #CE9829);
+  --gradient-progress: linear-gradient(90deg, #AC7C19, #684705);
   --gradient-hero: linear-gradient(120deg, #FFEAC1 0%, #FFF8EC 55%, #FFDC96 100%);
   --gradient-strong: linear-gradient(90deg, var(--sage), oklch(0.6 0.036 128));
   --gradient-developing: linear-gradient(90deg, var(--clay), oklch(0.703 0.086 62));
