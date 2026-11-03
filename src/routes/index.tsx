@@ -1,3 +1,4 @@
+import { EmailGate } from "@/components/assessment/EmailGate";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -49,7 +50,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-type Phase = "intro" | "assessment" | "report";
+type Phase = "intro" | "assessment" | "email" | "report";
 
 const AREA_ICONS: Record<AreaId, typeof Heart> = {
   god: Sparkles,
@@ -102,7 +103,7 @@ function Index() {
         const parsed = JSON.parse(raw) as { answers?: Answers; index?: number; phase?: Phase };
         if (parsed.answers) setAnswers(parsed.answers);
         if (typeof parsed.index === "number") setIndex(parsed.index);
-        if (parsed.phase === "report") setPhase("report");
+        if (parsed.phase === "report" || parsed.phase === "email") setPhase(parsed.phase);
       }
     } catch {
       /* ignore */
@@ -126,7 +127,7 @@ function Index() {
 
   const next = () => {
     if (index + 1 >= TOTAL_QUESTIONS) {
-      setPhase("report");
+      setPhase("email");
       window.scrollTo({ top: 0 });
       return;
     }
@@ -196,7 +197,17 @@ function Index() {
     <div className="min-h-screen bg-background text-stone-700">
       <SiteHeader onStart={start} />
 
-      {phase === "report" && report ? (
+      {phase === "email" ? (
+        <main className="mx-auto max-w-[1200px] px-5 py-16">
+          <EmailGate
+            onSubmit={(email, name) => {
+              window.localStorage.setItem("smrap.contact.v1", JSON.stringify({ email, name }));
+              setPhase("report");
+              window.scrollTo({ top: 0 });
+            }}
+          />
+        </main>
+      ) : phase === "report" && report ? (
         <main className="mx-auto max-w-[1200px] px-5 py-10">
           <Breadcrumb current="Your profile" />
           <div className="mt-6">
