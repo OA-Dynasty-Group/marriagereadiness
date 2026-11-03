@@ -54,7 +54,7 @@ function OptionRow({
         <span
           className={`grid size-5 shrink-0 place-items-center rounded-full text-[11px] ${
             selected
-              ? "bg-oxblood text-stone-50"
+              ? "bg-oxblood text-stone-900"
               : "border border-stone-300 text-stone-400"
           }`}
         >
