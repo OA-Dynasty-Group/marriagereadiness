@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "A free 80-question marriage preparation test across 10 areas. Get your readiness profile, blind spots, and a 30-day preparation plan.",
+          "A free 80-question marriage readiness assessment across 10 areas. Get your readiness profile, blind spots, and a 30-day preparation plan.",
       },
       { property: "og:title", content: "Singles Marriage Readiness Assessment Profile" },
       {
@@ -73,7 +73,7 @@ const ICON_TONES = [
 
 const FAQ = [
   {
-    q: "Is this a test of whether I should get married?",
+    q: "Is this an assessment of whether I should get married?",
     a: "No. It is a preparation profile. It shows what you are bringing into marriage and what may need intentional growth — never a pass or fail.",
   },
   {
@@ -165,7 +165,7 @@ function Index() {
             </div>
             <button
               type="button"
-              aria-label="Exit test"
+              aria-label="Exit assessment"
               onClick={() => setPhase("intro")}
               className="grid size-9 place-items-center rounded-full text-stone-500 hover:bg-stone-100"
             >
@@ -224,7 +224,7 @@ function Index() {
                 <span className="mt-5 inline-flex items-center gap-2 rounded-full border border-clay/30 bg-background px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.12em] text-clay">
                   <span className="size-2 rounded-full bg-clay" />
                   <span className="size-2 rounded-full bg-stone-700" />
-                  Marriage readiness test · free
+                  Marriage readiness assessment · free
                 </span>
                 <h1 className="mt-5 text-5xl leading-[1.02] text-stone-900 sm:text-6xl">
                   Singles Marriage Readiness Profile
@@ -243,7 +243,7 @@ function Index() {
                     onClick={start}
                     className="inline-flex items-center gap-2 rounded-full bg-oxblood px-8 py-4 text-lg font-extrabold text-primary-foreground shadow-[var(--shadow-panel)] transition-transform hover:-translate-y-0.5"
                   >
-                    {answeredCount > 0 ? "Continue my test" : "Find my readiness profile"}
+                    {answeredCount > 0 ? "Continue my assessment" : "Begin my assessment"}
                     <ArrowRight className="size-5" />
                   </button>
                   <div className="text-sm leading-relaxed text-stone-500">
@@ -301,7 +301,7 @@ function Index() {
           <section id="areas" className="bg-stone-50 py-16">
             <div className="mx-auto max-w-[1200px] px-5">
               <div className="flex items-end justify-between gap-4">
-                <h2 className="text-3xl text-stone-900">What the test explores</h2>
+                <h2 className="text-3xl text-stone-900">What the assessment explores</h2>
                 <span className="text-sm font-bold text-oxblood">10 areas · scored 0–100</span>
               </div>
               <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -361,7 +361,7 @@ function Index() {
                   onClick={start}
                   className="inline-flex shrink-0 items-center gap-2 rounded-full bg-background px-7 py-3.5 font-extrabold text-oxblood transition-transform hover:-translate-y-0.5"
                 >
-                  Start the test <ArrowRight className="size-4" />
+                  Begin the assessment <ArrowRight className="size-4" />
                 </button>
               </div>
             </div>
@@ -427,7 +427,7 @@ function SiteHeader({ onStart }: { onStart: () => void }) {
           onClick={onStart}
           className="rounded-full bg-violet-soft px-5 py-2.5 font-bold text-oxblood transition-transform hover:-translate-y-0.5"
         >
-          Take the test
+          Begin assessment
         </button>
       </div>
     </header>
@@ -437,7 +437,7 @@ function SiteHeader({ onStart }: { onStart: () => void }) {
 function Breadcrumb({ current }: { current: string }) {
   return (
     <p className="text-sm text-stone-400">
-      Home / Tests / <span className="text-stone-500">{current}</span>
+      Home / Assessments / <span className="text-stone-500">{current}</span>
     </p>
   );
 }
